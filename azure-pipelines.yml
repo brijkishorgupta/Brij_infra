@@ -31,14 +31,7 @@ jobs:
       command: 'plan'
       workingDirectory: '$(System.DefaultWorkingDirectory)/'
       environmentServiceNameAzureRM: 'brij'
-  - task: TerraformTask@5
-    displayName: terraform apply
-    inputs:
-      provider: 'azurerm'
-      command: 'apply'
-      workingDirectory: '$(System.DefaultWorkingDirectory)/'
-      commandOptions: '-auto-approve'
-      environmentServiceNameAzureRM: 'brij'
+
   
   - task: TerraformTask@5
     displayName: distroy
