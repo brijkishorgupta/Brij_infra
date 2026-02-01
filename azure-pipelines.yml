@@ -3,14 +3,14 @@ name: resources create with dependency
 pool: infra_pool
 jobs:
 - job: terraforminstall 
-  displayName: job1 terraform install
+  displayName: job-1 terraform install
   steps: 
   - task: TerraformInstaller@1
     inputs:
       terraformVersion: 'latest'
 
-  job: terraforminit 
-  displayName: job2 terraform init
+- job: terraforminit 
+  displayName: job-2 terraform init
   steps: 
   - task: TerraformTask@5
     displayName: terraform init
