@@ -9,9 +9,6 @@ jobs:
     inputs:
       terraformVersion: 'latest'
 
-- job: terraforminit 
-  displayName: job-2 terraform init
-  steps: 
   - task: TerraformTask@5
     displayName: terraform init
     inputs:
