@@ -3,10 +3,7 @@ resource "azurerm_resource_group" "rg" {
   location = "central india"
 }
 
-resource "azurerm_resource_group" "rg" {
-  name     = "brij-rg"
-  location = "central india"
-}
+
 #implicit dependency
 resource "azurerm_virtual_network" "vnet" {
   name                = "depends-vnet"
