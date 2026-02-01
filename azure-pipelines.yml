@@ -32,7 +32,7 @@ jobs:
       workingDirectory: '$(System.DefaultWorkingDirectory)/'
       environmentServiceNameAzureRM: 'brij'
   - task: TerraformTask@5
-    displayName: terraform plan
+    displayName: terraform apply
     inputs:
       provider: 'azurerm'
       command: 'apply'
