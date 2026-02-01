@@ -39,7 +39,14 @@ jobs:
       workingDirectory: '$(System.DefaultWorkingDirectory)/'
       commandOptions: '-auto-approve'
       environmentServiceNameAzureRM: 'brij'
-
+  
+  - task: TerraformTask@5
+    displayName: distroy
+    inputs:
+      provider: 'azurerm'
+      command: 'destroy'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/'
+      environmentServiceNameAzureRM: 'brij'
 
 
 
